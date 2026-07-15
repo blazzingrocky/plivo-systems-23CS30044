@@ -1,0 +1,1 @@
+{"name": "D_burst_moderate", "loss": 0.015, "burst_loss": {"p_enter": 0.04, "p_exit": 0.33, "p_loss_in_burst": 0.65}, "delay_min_ms": 20, "delay_max_ms": 60, "dup": 0.01}

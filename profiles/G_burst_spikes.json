@@ -1,0 +1,1 @@
+{"name": "G_burst_spikes", "loss": 0.02, "burst_loss": {"p_enter": 0.04, "p_exit": 0.3, "p_loss_in_burst": 0.7}, "delay_min_ms": 20, "delay_max_ms": 60, "spike": {"prob": 0.04, "extra_ms": 120}, "dup": 0.01}

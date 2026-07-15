@@ -4,3 +4,13 @@ __pycache__/
 *.pyc
 *.pyo
 *.o
+
+# build output
+sender
+receiver
+
+# per-run artifacts (regenerated every run.py invocation)
+playout_log.json
+relay_stats.json
+sender_stats.log
+receiver_stats.log

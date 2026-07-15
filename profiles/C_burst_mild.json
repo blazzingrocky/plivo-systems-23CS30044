@@ -1,0 +1,1 @@
+{"name": "C_burst_mild", "loss": 0.01, "burst_loss": {"p_enter": 0.015, "p_exit": 0.5, "p_loss_in_burst": 0.5}, "delay_min_ms": 10, "delay_max_ms": 40, "dup": 0.005}

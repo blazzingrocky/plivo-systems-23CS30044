@@ -1,0 +1,1 @@
+{"name": "F_spikes", "loss": 0.02, "delay_min_ms": 10, "delay_max_ms": 40, "spike": {"prob": 0.05, "extra_ms": 150}, "dup": 0.005}

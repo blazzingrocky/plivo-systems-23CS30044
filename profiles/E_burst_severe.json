@@ -1,0 +1,1 @@
+{"name": "E_burst_severe", "loss": 0.02, "burst_loss": {"p_enter": 0.06, "p_exit": 0.25, "p_loss_in_burst": 0.8}, "delay_min_ms": 20, "delay_max_ms": 80, "dup": 0.01}
