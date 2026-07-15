@@ -22,7 +22,6 @@ No sequencing, no recovery, no state.
 **Finding**: raw i.i.d. packet loss alone exceeds the 1% miss cap regardless of
 `delay_ms` — no delay choice can fix a design with zero loss recovery. Overhead sits at
 1.02× (just the 4-byte seq header), meaning ~1× of the 2.0× budget is completely unused.
-(Detail: `BASELINE_FAILURE_ANALYSIS.md`.)
 
 ---
 
@@ -55,8 +54,8 @@ windows).
 
 **Why backward, not forward-block**: a future-looking block code can't emit its parity
 until the *last* frame of the group arrives, costing early group members up to
-`(k-1)×20ms` of avoidable delay. Backward orientation removes that tax entirely (derived
-in `FEC_DESIGN_REVIEW.md`, confirmed by the results below).
+`(k-1)×20ms` of avoidable delay. Backward orientation removes that tax entirely, as
+confirmed by the results below.
 
 | Profile | delay_ms sweep | Min valid delay | Miss % at min | Overhead |
 |---|---|---|---|---|
@@ -109,5 +108,5 @@ adds no value at competitive delays and does not change the minimum valid delay.
   50–120ms range, not a lateness problem — more delay cannot deliver a packet that was
   never received and never reconstructed. 110 ms is chosen for margin against
   unseen spike-heavy profiles, not because burst-loss profiles need it (they can't be
-  fixed by delay at all; that requires burst-aware FEC — see `FEC_DESIGN_REVIEW.md` and
-  `HIDDEN_PROFILE_RESULTS.md` for the interleaving/second-parity-stream analysis).
+  fixed by delay at all; that requires burst-aware FEC — see `HIDDEN_PROFILE_RESULTS.md`
+  for the interleaving/second-parity-stream analysis).

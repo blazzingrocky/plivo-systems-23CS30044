@@ -226,9 +226,8 @@ RETX    [0x03][seq  u32 BE][payload 160B]                  = 165 bytes   sender 
   waits up to <code>(k-1)×20ms</code> for its only chance at repair. Backward-looking
   parity is built purely from frames the sender already has, so it ships the instant its
   newest member arrives: no future-wait, no group-completion tax. This alone was found
-  (via closed-form delay modeling, see <code>FEC_DESIGN_REVIEW.md</code>) to cut the
-  achievable minimum delay by roughly 40–50&nbsp;ms relative to an equivalent-overhead
-  block code.</p>
+  (via closed-form delay modeling during design) to cut the achievable minimum delay by
+  roughly 40–50&nbsp;ms relative to an equivalent-overhead block code.</p>
   <h3>Fixpoint decoding — chained recovery</h3>
   <p>The receiver doesn't just solve isolated equations once: any parity with exactly one
   unknown member is resolved, and because windows <em>overlap</em> (window 3, rate 2),
@@ -345,9 +344,9 @@ RETX    [0x03][seq  u32 BE][payload 160B]                  = 165 bytes   sender 
 </section>
 
 <footer>
-  Generated from measured results in <code>RUNLOG.md</code>, <code>HIDDEN_PROFILE_RESULTS.md</code>,
-  and <code>FEC_DESIGN_REVIEW.md</code>. No figures in this report were estimated after
-  the fact — every number traces to a logged experiment run.
+  Generated from measured results in <code>RUNLOG.md</code> and <code>HIDDEN_PROFILE_RESULTS.md</code>.
+  No figures in this report were estimated after the fact — every number traces to a
+  logged experiment run.
 </footer>
 
 </div>
